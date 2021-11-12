@@ -67,6 +67,7 @@ app.post('/', async (req, res) => {
     res.redirect('/');
 })
 
-app.listen(3030, () => {
+const port = process.env.PORT || 3030
+app.listen(port, () => {
     console.log('Open on port 3030!');
 })
