@@ -55,7 +55,7 @@ app.post('/', async (req, res) => {
         from: 'shutterbugofficial121@gmail.com',
         to: user.mail,
         subject: 'New User SignUp',
-        text: `Hello ${user.name}! Welcome to the best photography website - ShutterBug`
+        text: `Hello ${user.name}! Welcome to our photography website. Regards, Shutterbug`
     };
     transporter.sendMail(mailOption, (err, info) => {
         if (err) {
@@ -69,5 +69,5 @@ app.post('/', async (req, res) => {
 
 const port = process.env.PORT || 3030
 app.listen(port, () => {
-    console.log('Open on port 3030!');
+    console.log(`Open on port ${port}!`);
 })
